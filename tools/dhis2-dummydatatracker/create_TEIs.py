@@ -180,6 +180,9 @@ def get_exp_random_dates_from_date_to_today(start_date, end_date = date.today(),
         upper_date = lower_date.replace(day=calendar.monthrange(lower_date.year, lower_date.month)[1])
         if upper_date > end_date:
             upper_date = end_date
+           
+        if upper_date > end_date:
+            upper_date = end_date
         # print(lower_date.strftime('%Y-%m-%d'))
         # print(upper_date.strftime('%Y-%m-%d'))
         return lower_date + timedelta(
